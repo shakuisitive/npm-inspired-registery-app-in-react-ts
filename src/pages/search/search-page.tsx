@@ -1,9 +1,18 @@
 import { useLoaderData } from "react-router-dom";
-import type { PackageSummary } from "../../api/types/packageSummary";
 import type { SearchLoaderResult } from "./search-loader";
+import { PackageListItem } from "../../components/package-list-item";
 
 export const SearchPage = () => {
-  const data = useLoaderData() as SearchLoaderResult;
+  const { searchResults } = useLoaderData() as SearchLoaderResult;
 
-  return <div>SearchPage</div>;
+  const renderedResults = searchResults.map((result) => (
+    <PackageListItem pack={result} key={result.name} />
+  ));
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold my-6">Search Results</h1>
+      <div className="space-y-4 mt-4">{renderedResults}</div>
+    </div>
+  );
 };
