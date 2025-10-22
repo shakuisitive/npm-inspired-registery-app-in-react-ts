@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+/* npm Brand Colors */
+:root {
+  --npm-red: #CB3837;
+  --near-black: #231F20;
+  --light-gray: #FAFAFA;
+  --mid-gray: #E5E5E5;
+  --dark-gray: #757575;
+  --success-green: #4CAF50;
+  --link-blue: #0076CC;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--near-black);
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mid-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-gray);
+}
+
+/* Utility classes for npm colors */
+.npm-red {
+  color: var(--npm-red);
+}
+
+.bg-npm-red {
+  background-color: var(--npm-red);
+}
+
+.border-npm-red {
+  border-color: var(--npm-red);
+}
+
+.near-black {
+  color: var(--near-black);
+}
+
+.bg-near-black {
+  background-color: var(--near-black);
+}
+
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+
+.border-mid-gray {
+  border-color: var(--mid-gray);
+}
+
+.text-dark-gray {
+  color: var(--dark-gray);
+}
+
+.text-success {
+  color: var(--success-green);
+}
+
+.text-link {
+  color: var(--link-blue);
+}

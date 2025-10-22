@@ -3,16 +3,25 @@ import { SearchInput } from "./search-input";
 
 export const Header = () => {
   return (
-    <div className="flex items-center justify-between px-4 border-b h-14">
-      <div className="flex items-center space-x-2 text-sm">
-        <Link to="/" className="text-lg font-bold">
-          Home
-        </Link>
-      </div>
+    <header className="bg-white border-b-2 border-mid-gray shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo and Brand */}
+          <div className="flex items-center space-x-4">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-npm-red rounded flex items-center justify-center">
+                <span className="text-white font-bold text-sm">npm</span>
+              </div>
+              <span className="text-xl font-bold near-black">npm Registry</span>
+            </Link>
+          </div>
 
-      <div className="w-full max-w-xl ml-4">
-        <SearchInput />
+          {/* Search Bar */}
+          <div className="flex-1 max-w-2xl mx-8">
+            <SearchInput />
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
